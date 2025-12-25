@@ -14,30 +14,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css">
     <link rel="stylesheet" href="css/index.css">
+
     <script defer src="js/index.js"></script>
 </head>
 
 <body id="page-home">
     <!-- HEADER -->
-    <header>
+    <header class="header" id="site-header">
         <div class="header__content container">
-            <div class="logo">
-                <a href="index.html"><img src="assets/Logo.svg" alt="Logo MoneyMasters"></a>
-            </div>
-        
-            <div>
-                <nav>
-                    <ul class="nav__list">
-                        <li><a class="nav__link" href="index.html">Inicio</a></li>
-                        <li><a class="nav__link" href="product.html">Programa</a></li>
-                        <li><a class="nav__link" href="about.html">Quiénes somos</a></li>
-                        <li><a class="nav__link" href="kids.html">Niños/as</a></li>
-                        <li><a class="nav__link" href="institutions.html">Instituciones</a></li>
-                        <li><a class="nav__link" href="faq.html">FAQ</a></li>
-                        <li><a class="nav__link" href="contact.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+            
+            <a class="logo" href="index.html">
+                <img class="logo__full" src="assets/Logo.svg" alt="Logo MoneyMasters">
+                <img class="logo__compact" src="assets/logo-mobile.svg" alt="Logo MM">
+            
+            </a>
+
+            <button class="nav__toggle" type="button">
+                <i class="ri-menu-3-line"></i>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">Inicio</a></li>
+                    <li><a class="nav__link" href="product.html">Programa</a></li>
+                    <li><a class="nav__link" href="about.html">Quiénes somos</a></li>
+                    <li><a class="nav__link" href="kids.html">Niños/as</a></li>
+                    <li><a class="nav__link" href="institutions.html">Instituciones</a></li>
+                    <li><a class="nav__link" href="faq.html">FAQ</a></li>
+                    <li><a class="nav__link" href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- HEADER -->
@@ -66,7 +72,7 @@
 
                 <div class="grid grid--cards characters__grid ">
                     <article class="character-card character-card--green">
-                        <div class="character--card__media">
+                        <div class="character-card__media">
                             <img class="character-card__img" src="assets/saveman.jpeg" alt="The SaveMan">
                         </div>
 
@@ -82,7 +88,7 @@
                     </article>
 
                     <article class="character-card character-card--pink">
-                        <div class="character--card__media">
+                        <div class="character-card__media">
                             <img class="character-card__img" src="assets/cashqueen.jpeg" alt="The CashQueen">
                         </div>
 
@@ -114,7 +120,7 @@
                     </article>
 
                     <article class="character-card character-card--blue">
-                        <div class="character--card__media">
+                        <div class="character-card__media">
                             <img class="character-card__img" src="assets/investor.jpeg" alt="The Investor">
                         </div>
 

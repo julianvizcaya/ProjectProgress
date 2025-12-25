@@ -202,12 +202,15 @@ input, select {
 /* ----------------------------------------------------------- */
 
 /* HEADER*/
-header {
+.header {
     background: var(--c-bg-ligth);
+    /* padding: var(--s-sm) 0; */
     border-bottom: .0625rem solid var(--c-border);
     position: sticky;
     top: 0;
     z-index: 1;
+
+    transition: var(--t-base);
 
     & .header__content {
         display: flex;
@@ -216,13 +219,51 @@ header {
         gap: var(--s-sm);
         padding: var(--s-sm) 0;
 
-        & .logo {
-            width: calc(var(--s-xl) * 3);
-            height: auto;
         }
-    }
 
-    & nav {
+        & .logo {
+            display: inline-flex;
+            align-items: center;;
+            width: auto;
+            /* height: auto; */
+
+            & .logo__full {
+                width: 24rem;
+                height: auto;
+                display: block;
+            }
+
+            & .logo__compact {
+                display: none;
+                width: 6rem;
+                height: auto;
+            }
+        }
+
+        & .nav__toggle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: var(--r-md);
+            border: .0625rem solid var(--c-border);
+            background: var(--c-bg-ligth);
+            cursor: pointer;
+
+            display: none;
+            place-items: center;
+            transition: var(--t-base);
+
+            & i {
+                font-size: 1.4rem;
+                line-height: 1;
+                color: var(--c-text-b);
+            }
+
+            &:hover {
+                transform: translateY(calc(var(--s-xs) * -.5));
+            }
+        }
+    
+    /* & nav { */
 
         & .nav__list {
             display: flex;
@@ -240,13 +281,14 @@ header {
             border-radius: var(--r-md);
 
             transition: var(--t-base);
-        }
-        .nav__link:hover {
+
+            &:hover {
             background-color: var(--c-blue);
             color: var(--c-bg-ligth);
+            }
         }
 
-        .nav__link:focus-visible {
+        /* .nav__link:focus-visible {
             outline: none;
             box-shadow: var(--focus-ring);
         }
@@ -256,9 +298,93 @@ header {
             background-color: var(--c-blue);
             color: var(--c-bg-ligth);
             font-weight: var(--f-semibold);
+        } */
+    /* } */
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        /* padding: calc(var(--s-xs) * 1.2) 0; */
+        box-shadow: 0 .5rem 1.5rem color-mix(in srgb, var(--c-text-b) 10%, transparent);
+        }
+
+        &.fixed .logo {
+            & .logo__full {
+                display: none;
+            }
+
+            & .logo__compact {
+                display: block;
+            }
+        }
+    }
+
+@media (max-width: 56rem) {
+    .header {
+        position: sticky;
+        top: 0;
+
+        & .logo {
+
+            & .logo__full {
+                display: none;
+            }
+
+            & .logo__compact {
+                display: block;
+            }
+        }
+
+        & .nav__toggle {
+            display: grid;
+            z-index: 1;
+        }
+
+        & .nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+
+            background: var(--c-blue);
+            /* border-bottom: .0625rem solid var(--c-border); */
+            /* box-shadow: var(--c-shadow); */
+
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-0.5rem);
+
+            transition: var(--t-base) var(--t-base) var(--t-base);
+        }
+
+        &.is-open {
+            & .nav {
+            max-height: 22rem;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            }
+        }
+
+        & .nav__list {
+            flex-direction: column;
+            align-items: center;
+            padding: var(--s-sm);
+            gap: calc(var(--s-xs) / 2);
+        }
+
+        & .nav__link {
+            padding: var(--s-sm);
+            color: var(--c-bg-ligth);
         }
     }
 }
+       
+
 /* /HEADER*/
 
 /* BANNER */
@@ -341,6 +467,8 @@ header {
                 height: 100%;
                 object-fit: cover;
                 display: block;
+
+                transition: var(--t-base) var(--t-base);
                 }
 
         & .character-card__body {
