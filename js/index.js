@@ -29,13 +29,13 @@ toggleBtn.addEventListener('click', () => {
     header.classList.toggle('is-open', isOpen)
 
     const icon = toggleBtn.querySelector('i')
-    icon.className = isOpen ? 'ri-close-line' : 'ri-menu-3-line'
+    icon.className = isOpen ? 'ri-close-line' : 'ri-menu-line'
 })
 
 navLinks.forEach((link) => {
     link.addEventListener('click', () => {
         isOpen = false
         header.classList.remove('is-open')
-        toggleBtn.querySelector('i').className = 'ri-menu-3-line'
+        toggleBtn.querySelector('i').className = 'ri-menu-line'
     })
 })
