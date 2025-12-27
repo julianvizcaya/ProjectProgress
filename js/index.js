@@ -2,10 +2,6 @@ const header = document.getElementById('site-header')
 const toggleBtn = document.querySelector('.nav__toggle')
 const navLinks = document.querySelectorAll('.nav__link')
 
-function setHeaderHeightVar () {
-    header.style.setProperty('--header-h', header.offsetHeight + 'px')
-}
-
 function setFixed() {
     const activar = 30
 

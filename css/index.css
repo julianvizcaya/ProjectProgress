@@ -203,8 +203,8 @@ input, select {
 
 /* HEADER*/
 .header {
-    background: var(--c-bg-ligth);
-    border-bottom: .0625rem solid var(--c-border);
+    background: color-mix(in srgb, var(--c-blue) 10%, var(--c-bg-ligth));
+    /* border-bottom: .0625rem solid var(--c-border); */
     position: sticky;
     top: 0;
     z-index: 1;
@@ -268,7 +268,7 @@ input, select {
         }
     
     & .nav {
-        grid-area: nav; /*cambia cosas*/
+        grid-area: nav;
 
         & .nav__list {
             display: flex;
@@ -383,15 +383,15 @@ input, select {
 
             width: 2.75rem;
             height: 2.75rem;
-            border-radius: var(--r-md);
-            border: .0625rem solid var(--c-border);
-            background: var(--c-bg-ligth);
+            border-radius: none;
+            border: none;
+            background: none;
             cursor: pointer;
 
             & i {
                 font-size: 1.4rem;
-                /* color: var(--c-text-b); */
-                /* line-height: 1; */
+                color: var(--c-green);
+                line-height: 1;
             }
         }
 
@@ -400,9 +400,9 @@ input, select {
             left: 0;
             right: 0;
             bottom: 0;
-            top: var(--header-h, 4.5rem); /*JS*/
+            top: 4.5rem;
             
-            background: var(--c-bg-ligth);
+            background: color-mix(in srgb, var(--c-blue) 10%, var(--c-bg-ligth));
             opacity: 0%;
             pointer-events: none;
 
@@ -484,50 +484,97 @@ input, select {
 
 /* BANNER */
 .banner {
-    background-color: var(--c-cream);
+    background: color-mix(in srgb, var(--c-blue) 10%, var(--c-bg-ligth));
 
-    background-image: linear-gradient(90deg, color-mix(in srgb, var(--c-text-b) 85%, transparent), color-mix(in srgb, var(--c-text) 70%, transparent), transparent), url('../assets/banner.jpg');
+    & .banner__card {
+        background: color-mix(in srgb, var(--c-blue) 12%, var(--c-bg-ligth));
+        border: .0625rem solid var(--c-border);
+        border-radius: var(--r-lg);
+        box-shadow: var(--c-shadow);
+        overflow: hidden;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-bottom: .0625rem solid var(--c-border);
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-areas: "copy media";
+        align-items: stretch;
+        
+        & .banner__copy {
+            grid-area: copy;
+            padding: clamp(1.5rem, 3vw, 3rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: var(--s-sm);
 
-    & .banner__content {
-        min-height: calc(var(--s-xl) * 4);
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: var(--s-sm);
-        max-width: calc(var(--mw-lg) * 0.75);
-        padding: var(--s-xl) 0;
+            & .banner__title {
+                color: var(--c-text-b);
+                line-height: 1.05;
+                margin: 0;
+            }
+        
+            & .banner__text {
+                color: var(--c-text);
+                line-height: 1.6;
+                max-width: 30rem;
+                margin: 0;
+            }
 
-        & .text--xl {
-            color: var(--c-bg-ligth);
-            line-height: 1.1;
-            font-weight: var(--f-semibold);
+            & .banner__actions {
+                display: flex;
+                gap: var(--s-sm);
+                flex-wrap: wrap;
+                margin-top: var(--s-xs);
+
+                & .btn--ligth {
+                    background:none;
+                    box-shadow: none;
+                    border-color: color-mix(in srgb, var(--c-text) 12%, transparent);
+                }
+            }
         }
 
-        & .text--sm {
-            color: color-mix(in srgb, var(--c-bg-ligth) 85%, transparent);
-            font-weight: var(--f-semibold);
+            & .banner__media {
+                grid-area: media;
+                min-height: calc(var(--s-xl) * 3);
+
+                & .banner__img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
+            }
         }
     }
+@media (max-width: 48rem) {
 
-    & .banner__actions {
-        display: flex;
-        justify-content: center;
-        gap: var(--s-sm);
-        flex-wrap: wrap;
-        margin-top: var(--s-md);
+    .banner__card {
+        grid-template-columns: 1fr;
+        grid-template-areas: "copy" "media";
+       
+        & .banner__copy {
+        align-items: center;
+        padding: clamp(1.5rem, 5vw, 2.5rem);
 
-        & .btn {
-            box-shadow: none;
-            border-color: transparent;
+            & .banner__title {
+            max-width: 20rem;
+            }
+
+            & .banner__text {
+            max-width: 20rem;
+            }
+    
+            & .banner__actions {
+            justify-content: center;
+            }
+        }
+
+        & .banner__media {
+            min-height: 14rem;
+            }
         }
     }
 }
+/* /BANNER */
 
 /* CHARACTERS */
 .characters {
