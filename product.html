@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educación financiera divertida para niños">
+    <meta property="og:image" content="https://julianvizcaya.github.io/ProjectProgress/assets/og-img.png">
 
-    <title>MoneyMasters | Product</title>
 
+    <title>MoneyMasters</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script defer src="js/index.js" ></script>
+
+    <script defer src="js/index.js"></script>
 </head>
 
 <body id="page-product">
@@ -44,126 +52,281 @@
     </header>
     <!-- HEADER -->
 
-    <main>
-        <section>
-            <div>
-            <h2>¿Qué es Money Masters?</h2>
+    <!-- QUE ES MM -->
+    <main id="top">
+        <section class="section pt">
+            <div class="container pt__layout">
+
+                <!-- Columna Izquierda -->
+                <div class="pt__aside">
+                    <div class="pt__hero">
+                        <span class="pt__kicker">Nuestro Propósito</span>
+                        <h2 class="text--lg pt__title">Money Masters</h2>
+                        <p class="body--md pt__subtitle">Promover una cultura de ahorro y responsabilidad financiera en la población infantil, brindando a los niños y niñas las herramientas necesarias para adquirir conocimientos, desarrollar hábitos saludables y tomar decisiones conscientes en el uso de su dinero desde una edad temprana.</p>
+
+                        <nav class="pt__toc">
+                            <a class="pt__toc-link" href="#que-es">¿Qué es MM?</a>
+                            <a class="pt__toc-link" href="#metodologia">Metodología</a>
+                            <a class="pt__toc-link" href="#personajes">Personajes</a>
+                            <a class="pt__toc-link" href="#ecosistema">Ecosistema</a>
+                            <a class="pt__toc-link" href="#para-quien">¿Para quién?</a>
+                            <a class="pt__toc-link" href="#estado">Estado</a>
+                            <a class="pt__toc-link" href="#mas">Contáctanos</a>
+                        </nav>
+                    </div>
+                </div>
+                 <!-- /Columna Izquierda -->
+
+                <!-- Columna Derecha -->
+                <div class="pt__main">
+                    <ol class="pt__timeline">
+
+                        <!-- 01 -->
+                        <li class="pt__item" id="que-es">
+                            <div class="pt__node">
+                                <span>01</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <p class="pt__kicker">Introducción</p>
+                                <h2 class="text--md pt__h">¿Qué es Money Masters?</h2>
+                                <p class="body--md pt__p">Un programa educativo que enseña a niños y niñas desde los 8 años a manejar su dinero de forma inteligente. A través de cuatro personajes, los niños aprenden a ahorrar, gastar, divertirse e invertir. El proyecto combina juego y educación práctica para crear hábitos financieros desde una edad temprana, con materiales diseñados para acompañar a toda la familia.</p>
+                                <p class="body--md pt__p">Se aprende con actividades prácticas, misiones claras y decisiones del día a día.</p>
+                            </article>
+                        </li>
+                        <!-- /01 -->
+
+                        <!-- 02 -->
+                         <li class="pt__item" id="metodologia">
+                            <div class="pt__node">
+                                <span>02</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <p class="pt__kicker">¿Cómo se aprende?</p>
+                                <h2 class="text--md pt__h">Nuestra metodología</h2>
+
+                                <ul class="pt__bullets">
+                                    <li class="body--md">Misiones guiadas con objetivos claros y progresivos</li>
+                                    <li class="body--md" >Retos en casa para practicar en familia.</li>
+                                    <li class="body--md" >Progreso visible a través de logros alcanzables.</li>
+                                    <li class="body--md" >Aprender haciendo con decisiones reales.</li>
+                                </ul>
+                            </article>
+                        </li>
+                         <!-- /02 -->
+
+                         <!-- 03 -->
+                          <li class="pt__item" id="personajes">
+                            <div class="pt__node">
+                                <span>03</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <p class="pt__kicker">Pilares</p>
+                                <h2 class="text--md pt__h">Guardianes del ahorro</h2>
+                                <p class="body--md pt__p">Cada personaje representa un pilar del aprendizaje financiero infantil y acompaña a los niños
+                                con misiones simples y prácticas.</p>
+
+                                <div class="grid grid--cards pt__characters">
+                                   <article class="character-card character-card--green">
+                                        <div class="character-card__media">
+                                            <img class="character-card__img" src="assets/saveman.jpeg" alt="The SaveMan">
+                                        </div>
+
+                                        <div class="character-card__body">
+                                            <h3 class="text--sm">The SaveMan</h3>
+                                            <p class="character-card__desc">Ahorro y metas.</p>
+                                        </div>
+                                    </article>    
+
+                                    <article class="character-card character-card--pink">
+                                        <div class="character-card__media">
+                                             <img class="character-card__img" src="assets/cashqueen.jpeg" alt="The CashQueen">
+                                        </div>
+
+                                        <div class="character-card__body">
+                                             <h3 class="text--sm">The CashQueen</h3>
+                                             <p class="character-card__desc">Gasto responsable.</p>
+                                        </div>
+                                    </article>
+
+                                    <article class="character-card character-card--purple">
+                                        <div class="character-card__media">
+                                            <img class="character-card__img" src="assets/funmoney.png" alt="The FunMoney">
+                                        </div>
+
+                                        <div class="character-card__body">
+                                             <h3 class="text--sm">The FunMoney</h3>
+                                             <p class="character-card__desc">Diversión con control.</p>
+                                        </div>
+                                    </article>
+                   
+                                    <article class="character-card character-card--blue">
+                                        <div class="character-card__media">
+                                            <img class="character-card__img" src="assets/investor.jpeg" alt="The Investor">
+                                        </div>
+
+                                        <div class="character-card__body">
+                                            <h3 class="text--sm">The Investor</h3>
+                                            <p class="character-card__desc">Invertir a futuro.</p>
+                                        </div>
+                                    </article>
+                            </div>
+                        </article>
+                    </li>
+                    <!-- /03 -->
+
+                    <!-- 04 -->
+                     <li class="pt__item" id="ecosistema">
+                            <div class="pt__node">
+                                <span>04</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <span class="pt__kicker">Estructura</span>
+                                <h2 class="text--md pt__h">Ecosistema</h2>
+
+                                <p class="body--md pt__p">Money Masters integra materiales, experiencias prácticas y acompañamiento para reforzar hábitos
+                                financieros en contextos reales.</p>
+
+                                <div class="pt__mini">
+                                    <div class="pt__mini-card">
+                                        <h3 class="text--sm">Qué incluye</h3>
+                                        <p class="body--md pt__p">Misiones, guías y actividades para aplicar en el día a día.</p>
+                                    </div>
+
+                                    <div class="pt__mini-card">
+                                        <h3 class="text--sm">Seguimiento</h3>
+                                        <p class="body--md pt__p">Progreso visible con logros y hábitos medibles.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                     <!-- /04 -->
+
+                    <!-- 05 -->
+                     <li class="pt__item" id="para-quien">
+                            <div class="pt__node">
+                                <span>05</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <span class="pt__kicker">Audiencia</span>
+                                <h2 class="text--md pt__h">¿Para quién está pensado?</h2>
+
+                                <p class="body--md pt__p">Para niños y niñas que quieran aprender hábitos financieros desde temprana edad, familias que deseen
+                                acompañar el proceso en casa e instituciones educativas que busquen un complemento práctico.</p>
+
+                                <div class="pt__mini pt__mini--3">
+                                    <div class="pt__mini-card">
+                                        <h3 class="text--sm">Niños/as</h3>
+                                        <p class="body--md pt__p">Aprenden con personajes y misiones simples.</p>
+                                    </div>
+
+                                    <div class="pt__mini-card">
+                                        <h3 class="text--sm">Familias</h3>
+                                        <p class="body--md pt__p">Refuerzan hábitos con retos en casa.</p>
+                                    </div>
+
+                                    <div class="pt__mini-card">
+                                        <h3 class="text--sm">Instituciones</h3>
+                                        <p class="body--md pt__p">Integran el programa como apoyo educativo.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    <!-- /05 -->
+
+                    <!-- /06 -->
+                      <li class="pt__item" id="estado">
+                            <div class="pt__node">
+                                <span>06</span>
+                            </div>
+
+                            <article class="pt__card">
+                                <span class="pt__kicker">Roadmap</span>
+                                <h2 class="text--md pt__h">Estado actual del proyecto</h2>
+                                <p class="body--md pt__p">Money Masters se encuentra en una versión inicial con la metodología definida y una base de materiales
+                                lista para ser implementada y validada con usuarios.</p>
+
+                                <ul class="pt__bullets">
+                                    <li class="body--md">Metodología y estructura del programa definidas.</li>
+                                    <li class="body--md">Materiales base y narrativa de personajes listos.</li>
+                                    <li class="body--md">Siguientes pasos: ampliar misiones y mejorar el seguimiento del progreso.</li>
+                                </ul>
+                            </article>
+                        </li>
+                     <!-- /06 -->
+
+                    <!-- CTA 07 -->
+                     <li class="pt__item" id="mas">
+                            <div class="pt__node">
+                                <span>07</span>
+                            </div>
+
+                            <article class="pt__card pt__card--cta">
+                                <p class="pt__kicker">Contacto</p>
+                                <h2 class="text--md pt__h">¿Quieres saber más?</h2>
+
+                                <p class="body--md pt__p">Escríbenos y te contamos cómo se adapta Money Masters a tu contexto.</p>
+
+                                <a class="btn" href="contact.html">Contactar</a>
+                            </article>
+                        </li>
+                    <!-- /CTA 07 -->
+                    </ol>
+                </div>
             </div>
-            
-            <div>
-            <p>Es un programa educativo que enseña a niños y niñas desde los 8 años a manejar su dinero de forma inteligente. A través de cuatro personajes, los niños aprenden a ahorrar, gastar, divertirse e invertir. El proyecto combina juego y educación práctica para crear hábitos financieros desde una edad temprana, con materiales diseñados para acompañar a toda la familia.</p>
-            </div>
+            <a class="pt__to-top" href="#top">↑</a>
         </section>
-
-        <section>
-            <div>
-            <h2>Nuestra metodología</h2>
-            </div>
-        
-            <div>
-            <p>Aprender haciendo, Aprendizaje progresivo, material complementario, decisiones reales, no solo teoría</p>
-            </div>
-        </section>
-
-        <!-- PERSONAJES (Cards con imagenes y hover con la info) -->
-        <section>
-            <h2>Personajes</h2>
-            <p>Cada personaje representa un concepto clave y acompaña en actividades específicas</p>
-
-            <div>
-                <div>
-                    <h2>The SaveMan</h2>
-                    <p>Que representa, que enseña, que tipo de decisiones acompaña</p>
-                </div>
-
-                <div>
-                    <h2>The CashQueen</h2>
-                    <p>Que representa, que enseña, que tipo de decisiones acompaña</p>
-                </div>
-
-                <div>
-                    <h2>The FunMoney</h2>
-                    <p>Que representa, que enseña, que tipo de decisiones acompaña</p>
-                </div>
-
-                <div>
-                    <h2>The Investor</h2>
-                    <p>Que representa, que enseña, que tipo de decisiones acompaña</p>
-                </div>
-            </div>
-            <button>Ir a la experiencia de los niños</button>
-        </section>
-        <!-- /PERSONAJES -->
-
-        <!-- ECOSISTEMA -->
-        <section>
-            <h2>Ecosistema</h2>
-
-                <ul>
-                    <li>Personajes</li>
-                    <li>Actividades Educativas</li>
-                    <li>Juegos y dinámicas</li>
-                    <li>Materiales didácticos</li>
-                    <li>Experiencias presenciales (Eventos, talleres etc.)</li>
-                </ul>
-        </section>
-        <!-- /ECOSISTEMA -->
-
-        <!-- PARA QUIEN ES -->
-         <section>
-            <h2>¿Para quién esta pensado?</h2>
-            <div>
-                <div>
-                    <h3>Niños</h3>
-                    <p>Quienes desarrollan habilidades financieras a través del juego y la práctica</p>
-                    <button>Ver más</button>
-                </div>
-
-                <div>
-                    <h3>Familias</h3>
-                    <p>Educación financiera desde casa</p>
-                    <button>Ver más</button>
-                </div>
-
-                <div>
-                    <h3>Instituciones</h3>
-                    <p>Una propuesta educativa adaptable</p>
-                    <button>Ver más</button>
-                </div>
-            </div>
-        </section>
-        <!-- /PARA QUIEN ES -->
-
-        <!-- ESTADO ACTUAL DEL PROYECTO -->
-         <section>
-            <h2>Estado actual del proyecto</h2>
-            <p>Money Masters se encuentra en una fase inicial de desarrollo y validación. El programa se construye por fases, priorizando la calidad educativa y la experiencia del aprendizaje</p>
-         </section>
-         <!-- ESTADO ACTUAL DEL PROYECTO -->
-
-         <!-- CONTACTO -->
-         <section>
-            <h2>¿Quieres saber más?</h2>
-            <p>Explora el programa o contáctanos para resolver dudas y posibles colaboraciones</p>
-
-            <button>Conocer el programa</button>
-            <button>Contacto</button>
-        </section>
-        <!-- CONTACTO -->
     </main>
+    <!-- /QUE ES MM -->
 
     <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Money Masters</p>
+     <footer class="footer">
+        <div class="container footer__content">
 
-        <nav>
-            <ul>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </footer>
+            <div class="footer__brand">
+                <a class="footer__logo" href="index.html">
+                    <img src="assets/white-logo.svg" alt="Logo MM">
+                </a>
+                <p class="body--md">Programa educativo para que niños y familias desarrollen hábitos financieros reales con experiencias prácticas.</p>
+            </div>
+
+            <nav class="footer__nav">
+                <h3 class="footer__title text--sm">Secciones</h3>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="product.html">Programa</a></li>
+                    <li><a class="footer__link" href="about.html">Quiénes somos</a></li>
+                    <li><a class="footer__link" href="kids.html">Niños/as</a></li>
+                    <li><a class="footer__link" href="institutions.html">Instituciones</a></li>
+                    <li><a class="footer__link" href="faq.html">FAQ</a></li>
+                    <li><a class="footer__link" href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contact">
+                <h3 class="footer__title text--sm">Contacto</h3>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="mailto:moneymasters@gmail.com">moneymasters@gmail.com</a></li>
+                    <li><a class="footer__link" href="tel:+57XXXXXXXXXX">+57 XXX XXX XXXX</a></li>
+                </ul>
+
+                <div class="footer__social">
+                    <a class="footer__icon" href="#"><i class="ri-instagram-line"></i></a>
+                    <a class="footer__icon" href="#"><i class="ri-tiktok-line"></i></a>
+                    <a class="footer__icon" href="#"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container footer__bottom-content">
+                <p class="body--md">© 2025 Money Masters. Todos los derechos reservados.</p>
+            </div>
+        </div>
+     </footer>
     <!-- /FOOTER -->
-    
 </body>
 </html>

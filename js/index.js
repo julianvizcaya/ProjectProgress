@@ -35,3 +35,4 @@ navLinks.forEach((link) => {
         toggleBtn.querySelector('i').className = 'ri-menu-line'
     })
 })
+
